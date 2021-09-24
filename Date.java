@@ -45,26 +45,5 @@ public class Date {
     public void setDay(int day) {
         this.day = day;
     }
-public boolean isValidDate(int year, int month, int day) {
-        if (year < minYear || year > maxYear) {
-            return false;
-        }
-        if (month < 1 || month > 12) {
-            return false;
-        }
-        int totalDay = getMonthLastDay(month);
-
-        if (day < 1 || totalDay > 31) {
-            return false;
-        }
-        return true;
-    }
-
-    public int getMonthLastDay(int month) {
-        if (month >= 1 && month <= 6) {
-            return 31;
-        } else
-            return 30;
-    }
 
 }
